@@ -26,17 +26,7 @@ namespace MYAPI.BAL.Services
         {
             Customer sc = new Customer();
             Customer cus= _dbCus.GetCustomer(cid);
-            if(cus.Cid>0)
-            {
-                sc.status = 200;
-                sc.Message = "Customer is Found!!";
-            }
-            else
-            {
-                sc.status = 400;
-                sc.Message = "Customer Not Found!!";
-            }
-            return sc;
+            return cus;
         }
         public List<Customer> GetCustomers()
         {
